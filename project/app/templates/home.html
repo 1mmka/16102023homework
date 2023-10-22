@@ -16,7 +16,8 @@
     {% endfor %}
 
     {% if request.user.is_authenticated %}
-        <a href="{% url 'logout' %}">Выйти из аккаунта</a>
+        <a href="{% url 'logout' %}">Выйти из аккаунта</a><br>
+        <a href="{% url 'product-create' %}">Создать продукт</a>
     {% else %}
         <a href="{% url 'login' %}">Войти в аккаунт</a> | <a href="{% url 'register_page' %}">Регистрация</a>
     {% endif %}
